@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <circle cx="100" cy="100" r="96" fill="#FFF8F0" stroke="#A0C4FF" stroke-width="3"/>
+  <circle cx="100" cy="100" r="96" fill="#FFFDF8" stroke="#A0C4FF" stroke-width="3"/>
   <!-- Head -->
   <circle cx="100" cy="80" r="32" fill="#A0C4FF" opacity="0.4"/>
   <!-- Body -->
   <ellipse cx="100" cy="155" rx="44" ry="32" fill="#A0C4FF" opacity="0.3"/>
   <!-- Smile -->
-  <path d="M88 86 Q100 96, 112 86" fill="none" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M88 86 Q100 96, 112 86" fill="none" stroke="#1A2B6B" stroke-width="2" stroke-linecap="round"/>
   <!-- Eyes -->
-  <circle cx="90" cy="76" r="3" fill="#3D3D3D"/>
-  <circle cx="110" cy="76" r="3" fill="#3D3D3D"/>
+  <circle cx="90" cy="76" r="3" fill="#1A2B6B"/>
+  <circle cx="110" cy="76" r="3" fill="#1A2B6B"/>
 </svg>
