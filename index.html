@@ -7,23 +7,23 @@
   <meta name="description" content="Stargazer Innovations is a technical consulting firm helping non-profits turn vision into reality through product strategy and purposeful technology.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- ========== Nav ========== -->
-  <header>
+  <header id="site-header">
     <nav class="site-nav">
       <a href="index.html" class="logo">
-        <span>Stargazer Innovations</span>
-        <img src="images/logo-placeholder.svg" alt="Stargazer Innovations logo">
+        <img src="images/logo-placeholder.svg" alt="">
+        <span>Stargazer</span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#why">Why Us</a></li>
         <li><a href="team.html">Team</a></li>
+        <li class="always-show"><a href="#contact" class="nav-cta">Get in Touch</a></li>
       </ul>
     </nav>
   </header>
@@ -32,23 +32,34 @@
   <section class="hero">
     <img
       src="images/logo-placeholder.svg"
-      alt="Stargazer Innovations — hot air balloon placeholder logo"
+      alt="Stargazer Innovations logo"
       class="balloon-logo"
     >
+    <p class="eyebrow">Stargazer Innovations</p>
     <h1>Technology with Heart</h1>
     <p class="tagline">
-      We partner with non-profits and mission-driven organizations to turn bold visions into
-      real products — no more, no less than what you actually need.
+      We partner with non-profits and mission-driven organizations to turn bold
+      visions into real products — no more, no less than what you actually need.
     </p>
-    <a href="team.html" class="cta-btn">Meet the Team</a>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+      <a href="team.html" class="btn btn-ghost">Meet the Team</a>
+    </div>
+    <span class="scroll-hint">Scroll to explore ↓</span>
   </section>
-
-  <div class="sparkle-divider" aria-hidden="true">+ &middot; +</div>
 
   <!-- ========== Services ========== -->
   <section class="services" id="services">
     <div class="container">
-      <h2 class="section-title">What We Do</h2>
+      <div class="section-head">
+        <p class="eyebrow">What We Do</p>
+        <h2 class="section-title">Purposeful technology, end to end.</h2>
+        <p>
+          From first conversation to lasting adoption, we meet mission-driven teams
+          wherever they are — and only build what genuinely moves the mission forward.
+        </p>
+      </div>
+
       <div class="card-grid">
 
         <div class="card">
@@ -115,36 +126,78 @@
     </div>
   </section>
 
-  <div class="sparkle-divider" aria-hidden="true">+ &middot; +</div>
-
-  <!-- ========== Why Us ========== -->
+  <!-- ========== Why Us (inverted statement) ========== -->
   <section class="why" id="why">
     <div class="container">
-      <h2 class="section-title">Why Stargazer?</h2>
-      <div class="why-content">
-        <p>
-          Too many non-profits get sold technology they don't need by
-          consultants who don't understand their world. We started
-          Stargazer Innovations because we believe mission-driven
-          organizations deserve a partner who listens first and builds
-          second.
+      <div class="why-content on-dark">
+        <p class="eyebrow">Why Stargazer</p>
+        <p class="why-statement">
+          Too many non-profits get sold technology they don't need.
+          We <em>listen first</em> and build second.
         </p>
-        <p>
-          Our default is simplicity. We lead with product consulting —
-          understanding your goals, mapping your workflows, and finding
-          the most straightforward path forward. We only bring in
-          engineering when it's genuinely the right call. The result is
-          less waste, less complexity, and more impact.
+        <p class="why-detail">
+          Our default is simplicity. We lead with product consulting — understanding
+          your goals, mapping your workflows, and finding the most straightforward path
+          forward. We only bring in engineering when it's genuinely the right call.
+          The result is less waste, less complexity, and more impact.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- ========== Stats ========== -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="stats">
+        <div class="stat">
+          <div class="num">Product-first</div>
+          <div class="label">We consult before we code, every time.</div>
+        </div>
+        <div class="stat">
+          <div class="num">Mission-fit</div>
+          <div class="label">Scoped to your budget, people, and purpose.</div>
+        </div>
+        <div class="stat">
+          <div class="num">Build only when needed</div>
+          <div class="label">Engineering stays in reserve until it's the right call.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-band" id="contact">
+    <div class="container">
+      <h2>Let's turn your mission into something real.</h2>
+      <a href="mailto:hello@stargazerinnovations.com" class="btn btn-primary">Start a Conversation</a>
+    </div>
+  </section>
+
   <!-- ========== Footer ========== -->
   <footer class="site-footer">
-    <div class="footer-stars">+ &middot; + &middot; +</div>
-    <p>&copy; 2026 Stargazer Innovations. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">Stargazer Innovations</div>
+        <ul class="footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Stargazer Innovations. All rights reserved.
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Solidify the nav once the hero scrolls past.
+    const header = document.getElementById('site-header');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  </script>
 
 </body>
 </html>
