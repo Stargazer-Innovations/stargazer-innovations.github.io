@@ -1,21 +1,24 @@
 /* =====================================================================
-   Stargazer Innovations — "NASA of the 22nd century"
-   Light, aspirational, precise. Hairlines, line art, quiet motion.
+   Stargazer Innovations
+   A campfire at the edge of the night sky: deep blue space, ember-orange
+   instrumentation, cream marshmallow text, dashed trajectories, and a
+   scrappy little space program's warmth.
    ===================================================================== */
 
 :root {
-  --ink:        #0b0f14;   /* near-black text */
-  --ink-soft:   #3d4450;   /* secondary text */
-  --muted:      #7a8290;   /* tertiary text */
-  --line:       #e3e7ee;   /* hairline borders */
-  --line-soft:  #eef1f6;
-  --bg:         #fbfcfe;   /* base */
-  --bg-alt:     #f4f6fa;   /* alternating section */
-  --bg-dark:    #070a0f;   /* inverted section */
-  --accent:      #b7791f;  /* deep amber — starlight on white, used sparingly */
-  --accent-star: #e8b23a;  /* bright gold — glints, meteors, star specks */
-  --accent-dim:  rgba(232, 178, 58, 0.4);
-  --on-dark:    #f5f7fa;
+  --space:       #0c1524;   /* base night sky */
+  --space-deep:  #070d18;   /* deeper sections & footer */
+  --panel:       #101b2d;   /* ship-log entry panels */
+  --panel-soft:  #0a1120;   /* alternating section */
+  --cream:       #efe6d1;   /* primary text — marshmallow/parchment */
+  --cream-soft:  #adb6c4;   /* secondary text */
+  --muted:       #6d7a8f;   /* tertiary text */
+  --line:        rgba(239, 230, 209, 0.10);   /* hairlines */
+  --line-strong: rgba(239, 230, 209, 0.24);
+  --ember:       #ff9d45;   /* ship-log orange */
+  --ember-soft:  rgba(255, 157, 69, 0.45);
+  --ember-glow:  rgba(255, 157, 69, 0.12);
+  --flame:       #ffce6b;   /* flame tips, sun core */
 
   --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -38,11 +41,16 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--ink);
-  background: var(--bg);
+  color: var(--cream);
+  background: var(--space);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--ember);
+  color: var(--space-deep);
 }
 
 img {
@@ -63,14 +71,14 @@ a {
   padding: 0 32px;
 }
 
-/* Technical micro-label: "01 / WHAT WE DO" */
+/* Instrument micro-label: "01 / SHIP LOG" */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--ember);
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -81,7 +89,7 @@ a {
   content: '';
   width: 32px;
   height: 1px;
-  background: var(--accent);
+  background: var(--ember-soft);
   flex: none;
 }
 
@@ -95,7 +103,7 @@ a {
   content: '';
   width: 32px;
   height: 1px;
-  background: var(--accent);
+  background: var(--ember-soft);
   flex: none;
 }
 
@@ -129,23 +137,24 @@ a {
 .btn:hover { transform: translateY(-1px); }
 
 .btn-primary {
-  background: var(--ink);
-  color: var(--on-dark);
+  background: var(--ember);
+  color: #1c1006;
 }
 .btn-primary:hover {
-  background: #1b2330;
-  box-shadow: 0 8px 24px rgba(11, 15, 20, 0.18);
+  background: #ffb066;
+  box-shadow: 0 6px 30px rgba(255, 157, 69, 0.35);
 }
 
 .btn-ghost {
   background: transparent;
-  color: var(--ink);
-  border-color: rgba(11, 15, 20, 0.35);
+  color: var(--cream);
+  border-color: rgba(239, 230, 209, 0.35);
 }
-.btn-ghost:hover { border-color: var(--ink); background: rgba(11, 15, 20, 0.04); }
-
-.on-dark .btn-ghost { color: var(--on-dark); border-color: rgba(245,247,250,0.4); }
-.on-dark .btn-ghost:hover { border-color: var(--on-dark); background: rgba(245,247,250,0.08); }
+.btn-ghost:hover {
+  border-color: var(--ember);
+  color: var(--ember);
+  background: var(--ember-glow);
+}
 
 /* ===== Navigation ===== */
 header {
@@ -157,9 +166,9 @@ header {
 }
 
 header.scrolled {
-  background: rgba(251, 252, 254, 0.85);
-  backdrop-filter: saturate(180%) blur(16px);
-  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  background: rgba(7, 13, 24, 0.82);
+  backdrop-filter: saturate(160%) blur(16px);
+  -webkit-backdrop-filter: saturate(160%) blur(16px);
   border-bottom-color: var(--line);
 }
 
@@ -182,12 +191,15 @@ header.scrolled {
   font-size: 1.1rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  color: var(--cream);
 }
 
 .site-nav .logo img {
   height: 26px;
   width: auto;
   object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(239, 230, 209, 0.2), 0 0 14px rgba(255, 157, 69, 0.25);
 }
 
 .site-nav .nav-links {
@@ -203,7 +215,7 @@ header.scrolled {
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--cream-soft);
   position: relative;
 }
 
@@ -213,24 +225,24 @@ header.scrolled {
   left: 0; right: 100%;
   bottom: -6px;
   height: 1px;
-  background: var(--accent);
+  background: var(--ember);
   transition: right 0.25s ease;
 }
 
-.site-nav .nav-links a:hover { color: var(--ink); }
+.site-nav .nav-links a:hover { color: var(--ember); }
 .site-nav .nav-links a:hover::after { right: 0; }
 
 .site-nav .nav-links a.nav-cta {
-  color: var(--ink);
-  border: 1px solid rgba(11, 15, 20, 0.4);
+  color: var(--cream);
+  border: 1px solid rgba(239, 230, 209, 0.35);
   border-radius: 2px;
   padding: 10px 22px;
 }
 .site-nav .nav-links a.nav-cta::after { display: none; }
 .site-nav .nav-links a.nav-cta:hover {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--on-dark);
+  background: var(--ember);
+  border-color: var(--ember);
+  color: #1c1006;
 }
 
 /* ===== Hero ===== */
@@ -241,17 +253,18 @@ header.scrolled {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: calc(var(--nav-height) + 40px) 32px 120px;
+  padding: calc(var(--nav-height) + 40px) 32px 140px;
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(120% 90% at 50% -10%, #fbf2de 0%, rgba(251, 242, 222, 0) 55%),
-    linear-gradient(180deg, #ffffff 0%, #f3f6fb 100%);
+    radial-gradient(90% 55% at 50% 48%, rgba(255, 157, 69, 0.07), transparent 60%),
+    radial-gradient(120% 70% at 85% 108%, rgba(255, 120, 45, 0.10), transparent 55%),
+    linear-gradient(180deg, var(--space-deep) 0%, var(--space) 60%, var(--space) 100%);
 }
 
 .hero > * { position: relative; z-index: 1; }
 
-/* Star canvas sits behind everything */
+/* The night sky sits behind everything */
 .hero-stars {
   position: absolute;
   inset: 0;
@@ -261,32 +274,56 @@ header.scrolled {
   pointer-events: none;
 }
 
-/* constellation lines draw themselves in on load (needs pathLength="1") */
-.hero-stars .constellation {
-  stroke: rgba(11, 15, 20, 0.16);
-  stroke-width: 1;
+/* the sun at the heart of the little orrery */
+.hero-stars .sun-core { fill: var(--flame); opacity: 0.9; }
+.hero-stars .sun-halo { opacity: 0.5; }
+
+/* dashed orbital trajectories, ship-log style */
+.hero-stars .orbit-ring {
   fill: none;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: draw 2.6s ease-out 0.4s forwards;
+  stroke: rgba(239, 230, 209, 0.13);
+  stroke-width: 1;
+  stroke-dasharray: 2 7;
 }
 
-.hero-stars .constellation.c2 { animation-delay: 1.1s; }
+/* planets drift slowly around the sun */
+.hero-stars .orbit {
+  transform-origin: 720px 430px;
+}
+.hero-stars .orbit.o1 { animation: orbit 80s  linear infinite; }
+.hero-stars .orbit.o2 { animation: orbit 140s linear infinite; }
+.hero-stars .orbit.o3 { animation: orbit 220s linear infinite; }
+
+.hero-stars .p-giants  { fill: #3fa98e; }
+.hero-stars .p-twin    { fill: #d9a05b; }
+.hero-stars .p-twin2   { fill: #c9854b; }
+.hero-stars .p-brittle { fill: #7e6fc9; }
+.hero-stars .p-moon    { fill: rgba(239, 230, 209, 0.8); }
+
+/* a wandering comet on its long ellipse */
+.hero-stars .comet-path {
+  fill: none;
+  stroke: rgba(239, 230, 209, 0.09);
+  stroke-width: 1;
+  stroke-dasharray: 3 8;
+}
+.hero-stars .comet line {
+  stroke: rgba(210, 232, 242, 0.5);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+.hero-stars .comet circle { fill: #d9ecf4; }
 
 /* loose background stars */
-.hero-stars .star { fill: var(--ink); opacity: 0.25; }
-.hero-stars .star.gold { fill: var(--accent-star); opacity: 0.6; }
+.hero-stars .star { fill: var(--cream); opacity: 0.4; }
+.hero-stars .star.ember { fill: var(--ember); opacity: 0.6; }
 .hero-stars .star.tw1 { animation: twinkle 4s ease-in-out infinite; }
 .hero-stars .star.tw2 { animation: twinkle 5.5s ease-in-out 1.2s infinite; }
 .hero-stars .star.tw3 { animation: twinkle 6.5s ease-in-out 2.6s infinite; }
 
-/* constellation vertices burn a little brighter */
-.hero-stars .node { fill: var(--ink); opacity: 0.55; }
-.hero-stars .node.gold { fill: var(--accent-star); opacity: 0.95; }
-
 /* four-point star glints */
 .hero-stars .glint {
-  fill: var(--accent-star);
+  fill: var(--flame);
   transform-box: fill-box;
   transform-origin: center;
   animation: glint 5s ease-in-out infinite;
@@ -296,19 +333,45 @@ header.scrolled {
 
 /* the occasional meteor */
 .hero-stars .shooting-star {
-  stroke: var(--accent-star);
+  stroke: var(--ember);
   stroke-width: 1.5;
   stroke-linecap: round;
   opacity: 0;
   animation: shoot 11s ease-in 4s infinite;
 }
 
-.hero-stars .tick { stroke: var(--muted); stroke-width: 1; opacity: 0.5; }
+/* foreground ridge: pines and a campfire, someone's home down there */
+.hero-stars .ridge,
+.hero-stars .trees { fill: #060b13; }
+
+.hero-stars .camp-logs {
+  stroke: #03070d;
+  stroke-width: 3;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.hero-stars .camp-flame {
+  fill: url(#flame-grad);
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: flicker 2.4s ease-in-out infinite;
+}
+
+.hero-stars .spark {
+  fill: var(--flame);
+  opacity: 0;
+  animation: spark-rise 3.4s ease-out infinite;
+}
+.hero-stars .spark.s2 { animation-delay: 1.2s; }
+.hero-stars .spark.s3 { animation-delay: 2.3s; }
 
 .hero .hero-logo {
   width: 110px;
   height: auto;
   margin: 0 auto 36px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(239, 230, 209, 0.18), 0 0 46px rgba(255, 157, 69, 0.28);
   animation: rise 0.9s ease both;
 }
 
@@ -329,7 +392,7 @@ header.scrolled {
   font-size: clamp(1.05rem, 2vw, 1.25rem);
   max-width: 600px;
   margin: 0 auto 44px;
-  color: var(--ink-soft);
+  color: var(--cream-soft);
   font-weight: 400;
   animation: rise 0.9s ease 0.3s both;
 }
@@ -364,7 +427,7 @@ header.scrolled {
   content: '';
   width: 1px;
   height: 44px;
-  background: linear-gradient(180deg, var(--muted), transparent);
+  background: linear-gradient(180deg, var(--ember-soft), transparent);
   animation: descend 2.2s ease-in-out infinite;
 }
 
@@ -373,7 +436,11 @@ section {
   padding: 130px 0;
 }
 
-.section-alt { background: var(--bg-alt); }
+.section-alt {
+  background: var(--panel-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 
 .section-head {
   max-width: 720px;
@@ -397,41 +464,43 @@ section {
 .section-head p {
   margin-top: 20px;
   font-size: 1.1rem;
-  color: var(--ink-soft);
+  color: var(--cream-soft);
   max-width: 620px;
 }
 
 .section-head.centered p { margin-left: auto; margin-right: auto; }
 
-/* ===== Service Cards ===== */
+/* ===== Ship-log entry cards ===== */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  gap: 18px;
 }
 
 .card {
-  background: var(--bg);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 2px;
   padding: 48px 38px 44px;
   position: relative;
-  transition: background 0.25s;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
 
 .card::after {
   content: '';
   position: absolute;
-  top: -1px; left: 0;
+  top: -1px; left: -1px; right: -1px;
   height: 2px;
-  width: 100%;
-  background: var(--accent);
+  background: var(--ember);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
 }
 
-.card:hover { background: #fdfaf2; }
+.card:hover {
+  border-color: var(--ember-soft);
+  box-shadow: 0 0 36px var(--ember-glow), inset 0 0 24px rgba(255, 157, 69, 0.03);
+}
 .card:hover::after { transform: scaleX(1); }
 
 .card .card-index {
@@ -441,6 +510,7 @@ section {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -448,11 +518,11 @@ section {
   width: 36px;
   height: 36px;
   margin-bottom: 28px;
-  color: var(--ink);
+  color: var(--cream);
   transition: color 0.25s;
 }
 
-.card:hover .icon { color: var(--accent); }
+.card:hover .icon { color: var(--ember); }
 
 .card .icon svg {
   width: 100%;
@@ -470,14 +540,16 @@ section {
 
 .card p {
   font-size: 0.96rem;
-  color: var(--ink-soft);
+  color: var(--cream-soft);
   line-height: 1.65;
 }
 
-/* ===== Statement / Why (inverted) ===== */
+/* ===== Statement / Why (the supernova) ===== */
 .why {
-  background: var(--bg-dark);
-  color: var(--on-dark);
+  background:
+    radial-gradient(100% 85% at 50% 135%, rgba(255, 120, 45, 0.18), transparent 62%),
+    var(--space-deep);
+  color: var(--cream);
   position: relative;
   overflow: hidden;
 }
@@ -488,20 +560,17 @@ section {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(1.5px 1.5px at 12% 20%, rgba(242,193,78,0.7), transparent),
-    radial-gradient(1px 1px at 78% 12%, rgba(245,247,250,0.5), transparent),
-    radial-gradient(1px 1px at 62% 70%, rgba(245,247,250,0.35), transparent),
-    radial-gradient(1.5px 1.5px at 90% 48%, rgba(242,193,78,0.5), transparent),
-    radial-gradient(1px 1px at 32% 85%, rgba(245,247,250,0.4), transparent),
-    radial-gradient(1px 1px at 48% 35%, rgba(245,247,250,0.3), transparent);
+    radial-gradient(1.5px 1.5px at 12% 20%, rgba(255, 206, 107, 0.7), transparent),
+    radial-gradient(1px 1px at 78% 12%, rgba(239, 230, 209, 0.5), transparent),
+    radial-gradient(1px 1px at 62% 70%, rgba(239, 230, 209, 0.35), transparent),
+    radial-gradient(1.5px 1.5px at 90% 48%, rgba(255, 157, 69, 0.5), transparent),
+    radial-gradient(1px 1px at 32% 85%, rgba(239, 230, 209, 0.4), transparent),
+    radial-gradient(1px 1px at 48% 35%, rgba(239, 230, 209, 0.3), transparent);
   animation: twinkle 7s ease-in-out infinite;
   pointer-events: none;
 }
 
 .why .container { position: relative; z-index: 1; }
-
-.why .eyebrow { color: #f2c14e; }
-.why .eyebrow::before { background: #f2c14e; }
 
 .why-content {
   max-width: 900px;
@@ -513,23 +582,24 @@ section {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: var(--on-dark);
+  color: var(--cream);
 }
 
 .why-statement em {
   font-style: normal;
-  color: #f2c14e;
+  color: var(--ember);
+  text-shadow: 0 0 28px rgba(255, 157, 69, 0.4);
 }
 
 .why-content .why-detail {
   margin-top: 32px;
   font-size: 1.08rem;
   line-height: 1.7;
-  color: rgba(245, 247, 250, 0.72);
+  color: rgba(239, 230, 209, 0.7);
   max-width: 680px;
 }
 
-/* ===== Stats / Approach ===== */
+/* ===== Stats / Flight plan ===== */
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -537,8 +607,9 @@ section {
   text-align: left;
 }
 
+/* dashed top rules, like trajectories on a star chart */
 .stat {
-  border-top: 1px solid var(--ink);
+  border-top: 1px dashed var(--line-strong);
   padding-top: 28px;
   position: relative;
 }
@@ -547,7 +618,7 @@ section {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.24em;
-  color: var(--accent);
+  color: var(--ember);
   display: block;
   margin-bottom: 16px;
 }
@@ -563,10 +634,10 @@ section {
 .stat .label {
   margin-top: 12px;
   font-size: 0.95rem;
-  color: var(--ink-soft);
+  color: var(--cream-soft);
 }
 
-/* ===== CTA band ===== */
+/* ===== CTA band — around the campfire ===== */
 .cta-band {
   text-align: center;
   padding: 150px 0;
@@ -574,24 +645,53 @@ section {
   overflow: hidden;
 }
 
-/* faint star specks behind the CTA */
+/* warm firelight pooling behind the invitation */
 .cta-band::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(60% 50% at 50% 60%, rgba(232, 178, 58,0.05), transparent),
-    radial-gradient(1.5px 1.5px at 15% 30%, rgba(232, 178, 58,0.4), transparent),
-    radial-gradient(1px 1px at 30% 72%, rgba(11, 15, 20, 0.22), transparent),
-    radial-gradient(1.5px 1.5px at 74% 24%, rgba(11, 15, 20, 0.2), transparent),
-    radial-gradient(1px 1px at 86% 64%, rgba(232, 178, 58,0.35), transparent),
-    radial-gradient(1px 1px at 55% 14%, rgba(11, 15, 20, 0.16), transparent),
-    radial-gradient(1px 1px at 44% 86%, rgba(11, 15, 20, 0.16), transparent);
+    radial-gradient(55% 45% at 50% 62%, rgba(255, 157, 69, 0.10), transparent),
+    radial-gradient(1.5px 1.5px at 15% 30%, rgba(255, 157, 69, 0.4), transparent),
+    radial-gradient(1px 1px at 30% 72%, rgba(239, 230, 209, 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 74% 24%, rgba(239, 230, 209, 0.28), transparent),
+    radial-gradient(1px 1px at 86% 64%, rgba(255, 157, 69, 0.35), transparent),
+    radial-gradient(1px 1px at 55% 14%, rgba(239, 230, 209, 0.24), transparent),
+    radial-gradient(1px 1px at 44% 86%, rgba(239, 230, 209, 0.24), transparent);
   animation: twinkle 8s ease-in-out infinite;
   pointer-events: none;
 }
 
 .cta-band .container { position: relative; z-index: 1; }
+
+.cta-fire {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 28px;
+  display: block;
+  overflow: visible;
+}
+
+.cta-fire .fire-flame {
+  fill: var(--ember);
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: flicker 2.6s ease-in-out infinite;
+}
+
+.cta-fire .fire-flame-inner {
+  fill: var(--flame);
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: flicker 2.1s ease-in-out 0.4s infinite;
+}
+
+.cta-fire .fire-logs {
+  stroke: rgba(239, 230, 209, 0.55);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  fill: none;
+}
 
 .cta-band h2 {
   font-family: var(--font-display);
@@ -599,10 +699,17 @@ section {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.05;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   max-width: 18ch;
   margin-left: auto;
   margin-right: auto;
+}
+
+.cta-band .cta-sub {
+  color: var(--cream-soft);
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin: 0 auto 40px;
 }
 
 /* ===== Team Page ===== */
@@ -616,11 +723,11 @@ section {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(1.5px 1.5px at 12% 18%, rgba(232, 178, 58,0.35), transparent),
-    radial-gradient(1px 1px at 82% 12%, rgba(11, 15, 20, 0.2), transparent),
-    radial-gradient(1px 1px at 68% 30%, rgba(11, 15, 20, 0.15), transparent),
-    radial-gradient(1.5px 1.5px at 25% 40%, rgba(11, 15, 20, 0.18), transparent),
-    radial-gradient(1px 1px at 92% 45%, rgba(232, 178, 58,0.3), transparent);
+    radial-gradient(1.5px 1.5px at 12% 18%, rgba(255, 157, 69, 0.4), transparent),
+    radial-gradient(1px 1px at 82% 12%, rgba(239, 230, 209, 0.3), transparent),
+    radial-gradient(1px 1px at 68% 30%, rgba(239, 230, 209, 0.22), transparent),
+    radial-gradient(1.5px 1.5px at 25% 40%, rgba(239, 230, 209, 0.26), transparent),
+    radial-gradient(1px 1px at 92% 45%, rgba(255, 206, 107, 0.35), transparent);
   animation: twinkle 8s ease-in-out infinite;
   pointer-events: none;
 }
@@ -630,33 +737,35 @@ section {
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  gap: 18px;
   max-width: 960px;
   margin: 0 auto;
 }
 
 .team-card {
-  background: var(--bg);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 2px;
   padding: 52px 44px 48px;
   position: relative;
-  transition: background 0.25s;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
 
 .team-card::after {
   content: '';
   position: absolute;
-  top: -1px; left: 0;
+  top: -1px; left: -1px; right: -1px;
   height: 2px;
-  width: 100%;
-  background: var(--accent);
+  background: var(--ember);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
 }
 
-.team-card:hover { background: #fdfaf2; }
+.team-card:hover {
+  border-color: var(--ember-soft);
+  box-shadow: 0 0 36px var(--ember-glow);
+}
 .team-card:hover::after { transform: scaleX(1); }
 
 .team-card .crew-index {
@@ -675,12 +784,15 @@ section {
   margin-bottom: 28px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   filter: grayscale(100%);
-  transition: filter 0.4s ease;
+  transition: filter 0.4s ease, box-shadow 0.4s ease;
 }
 
-.team-card:hover .avatar { filter: grayscale(0%); }
+.team-card:hover .avatar {
+  filter: grayscale(0%);
+  box-shadow: 0 0 0 2px var(--ember-soft), 0 0 30px var(--ember-glow);
+}
 
 .team-card h3 {
   font-family: var(--font-display);
@@ -695,20 +807,21 @@ section {
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--ember);
   margin-bottom: 22px;
 }
 
 .team-card .bio {
   font-size: 0.96rem;
-  color: var(--ink-soft);
+  color: var(--cream-soft);
   line-height: 1.7;
 }
 
 /* ===== Footer ===== */
 .site-footer {
-  background: var(--bg-dark);
-  color: rgba(245, 247, 250, 0.6);
+  background: var(--space-deep);
+  border-top: 1px solid var(--line);
+  color: rgba(239, 230, 209, 0.6);
   padding: 72px 0 40px;
 }
 
@@ -726,7 +839,7 @@ section {
   font-size: 1.05rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--on-dark);
+  color: var(--cream);
 }
 
 .footer-links {
@@ -740,14 +853,14 @@ section {
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(245, 247, 250, 0.7);
+  color: rgba(239, 230, 209, 0.7);
 }
-.footer-links a:hover { color: var(--on-dark); }
+.footer-links a:hover { color: var(--ember); }
 
 .footer-bottom {
   margin-top: 48px;
   padding-top: 24px;
-  border-top: 1px solid rgba(245, 247, 250, 0.12);
+  border-top: 1px solid var(--line);
   font-size: 0.78rem;
   font-family: var(--font-mono);
   letter-spacing: 0.04em;
@@ -786,8 +899,8 @@ html.js [data-reveal].is-visible {
   to   { opacity: 1; transform: none; }
 }
 
-@keyframes draw {
-  to { stroke-dashoffset: 0; }
+@keyframes orbit {
+  to { transform: rotate(360deg); }
 }
 
 @keyframes twinkle {
@@ -805,6 +918,17 @@ html.js [data-reveal].is-visible {
   3%   { opacity: 0.9; }
   9%   { transform: translate(340px, 120px); opacity: 0; }
   100% { transform: translate(340px, 120px); opacity: 0; }
+}
+
+@keyframes flicker {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(0.88, 1.08); }
+}
+
+@keyframes spark-rise {
+  0%   { transform: translateY(0); opacity: 0; }
+  15%  { opacity: 0.9; }
+  100% { transform: translateY(-46px); opacity: 0; }
 }
 
 @keyframes descend {

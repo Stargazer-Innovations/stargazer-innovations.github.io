@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stargazer Innovations — Thoughtful Tech for Mission-Driven Organizations</title>
   <meta name="description" content="Stargazer Innovations is a technical consulting firm helping non-profits turn vision into reality through product strategy and purposeful technology.">
+  <meta name="theme-color" content="#070d18">
   <link rel="icon" type="image/svg+xml" href="images/logo-placeholder.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,53 +33,97 @@
   <!-- ========== Hero ========== -->
   <section class="hero">
 
-    <!-- Star chart: constellations, star specks, glints, a meteor -->
+    <!-- Night sky: a little solar system, a comet, and a campfire on the ridge below -->
     <svg class="hero-stars" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="sun-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"  stop-color="#ffce6b" stop-opacity="0.55"/>
+          <stop offset="35%" stop-color="#ff9d45" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#ff9d45" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="fire-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"  stop-color="#ff9d45" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#ff9d45" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="flame-grad" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%"  stop-color="#ff7d2e"/>
+          <stop offset="100%" stop-color="#ffce6b"/>
+        </linearGradient>
+      </defs>
 
-      <!-- constellation, west sky -->
-      <path class="constellation" pathLength="1"
-        d="M120 470 L210 370 L180 240 L305 175 L365 290 L300 390 L210 370"/>
-      <circle class="node"      cx="120" cy="470" r="2.4"/>
-      <circle class="node"      cx="210" cy="370" r="2.8"/>
-      <circle class="node"      cx="180" cy="240" r="2.4"/>
-      <circle class="node gold" cx="305" cy="175" r="3"/>
-      <circle class="node"      cx="365" cy="290" r="2.4"/>
-      <circle class="node"      cx="300" cy="390" r="2.4"/>
+      <!-- the sun, quietly burning behind everything -->
+      <circle class="sun-halo" cx="720" cy="430" r="90" fill="url(#sun-glow)"/>
+      <circle class="sun-core" cx="720" cy="430" r="7"/>
 
-      <!-- constellation, east sky -->
-      <path class="constellation c2" pathLength="1"
-        d="M1075 330 L1155 215 L1240 300 L1325 180 L1395 275"/>
-      <circle class="node"      cx="1075" cy="330" r="2.4"/>
-      <circle class="node gold" cx="1155" cy="215" r="2.8"/>
-      <circle class="node"      cx="1240" cy="300" r="2.4"/>
-      <circle class="node"      cx="1325" cy="180" r="2.8"/>
-      <circle class="node"      cx="1395" cy="275" r="2.4"/>
+      <!-- dashed orbital trajectories -->
+      <circle class="orbit-ring" cx="720" cy="430" r="190"/>
+      <circle class="orbit-ring" cx="720" cy="430" r="300"/>
+      <circle class="orbit-ring" cx="720" cy="430" r="430"/>
 
-      <!-- four-point star glints -->
-      <path class="glint" d="M305 164 Q307.2 172.8 316 175 Q307.2 177.2 305 186 Q302.8 177.2 294 175 Q302.8 172.8 305 164 Z"/>
-      <path class="glint g2" d="M1325 170 Q1327 178 1335 180 Q1327 182 1325 190 Q1323 182 1315 180 Q1323 178 1325 170 Z"/>
+      <!-- planets on their slow rounds -->
+      <g class="orbit o1">
+        <circle class="planet p-giants" cx="910" cy="430" r="6"/>
+      </g>
+      <g class="orbit o2">
+        <circle class="planet p-twin"  cx="426" cy="421" r="5"/>
+        <circle class="planet p-twin2" cx="413" cy="440" r="4"/>
+      </g>
+      <g class="orbit o3">
+        <circle class="planet p-brittle" cx="1024" cy="126" r="7"/>
+        <circle class="planet p-moon"    cx="1038" cy="114" r="2"/>
+      </g>
+
+      <!-- a wandering comet on its long ellipse -->
+      <path class="comet-path" d="M-60 220 Q 620 40 1500 300"/>
+      <g class="comet">
+        <line x1="990" y1="184" x2="1034" y2="144"/>
+        <line x1="985" y1="190" x2="1019" y2="160"/>
+        <circle cx="990" cy="184" r="3"/>
+      </g>
 
       <!-- loose background stars -->
-      <circle class="star tw1"      cx="490"  cy="140" r="1.5"/>
-      <circle class="star gold tw2" cx="640"  cy="90"  r="1.8"/>
-      <circle class="star tw3"      cx="820"  cy="150" r="1.4"/>
-      <circle class="star tw2"      cx="960"  cy="100" r="1.6"/>
-      <circle class="star gold tw1" cx="1010" cy="480" r="1.8"/>
-      <circle class="star tw3"      cx="1280" cy="480" r="1.5"/>
-      <circle class="star tw1"      cx="430"  cy="520" r="1.4"/>
-      <circle class="star gold tw3" cx="90"   cy="150" r="1.7"/>
-      <circle class="star tw2"      cx="260"  cy="620" r="1.3"/>
-      <circle class="star tw1"      cx="1180" cy="600" r="1.3"/>
-      <circle class="star tw3"      cx="720"  cy="60"  r="1.5"/>
-      <circle class="star tw2"      cx="60"   cy="380" r="1.4"/>
+      <circle class="star tw1"       cx="120"  cy="140" r="1.5"/>
+      <circle class="star tw2"       cx="240"  cy="90"  r="1.3"/>
+      <circle class="star ember tw3" cx="400"  cy="150" r="1.7"/>
+      <circle class="star tw1"       cx="560"  cy="80"  r="1.4"/>
+      <circle class="star tw3"       cx="700"  cy="120" r="1.5"/>
+      <circle class="star tw2"       cx="860"  cy="70"  r="1.3"/>
+      <circle class="star ember tw1" cx="1010" cy="110" r="1.8"/>
+      <circle class="star tw3"       cx="1160" cy="150" r="1.4"/>
+      <circle class="star tw2"       cx="1300" cy="90"  r="1.5"/>
+      <circle class="star tw1"       cx="1390" cy="190" r="1.3"/>
+      <circle class="star tw2"       cx="90"   cy="320" r="1.4"/>
+      <circle class="star ember tw3" cx="60"   cy="540" r="1.7"/>
+      <circle class="star tw1"       cx="200"  cy="620" r="1.3"/>
+      <circle class="star ember tw2" cx="1360" cy="420" r="1.6"/>
+      <circle class="star tw3"       cx="1250" cy="560" r="1.4"/>
+      <circle class="star tw1"       cx="160"  cy="430" r="1.3"/>
+
+      <!-- four-point star glints -->
+      <path class="glint" d="M340 199 Q342.2 207.8 351 210 Q342.2 212.2 340 221 Q337.8 212.2 329 210 Q337.8 207.8 340 199 Z"/>
+      <path class="glint g2" d="M1240 322 Q1241.8 328.2 1248 330 Q1241.8 331.8 1240 338 Q1238.2 331.8 1232 330 Q1238.2 328.2 1240 322 Z"/>
 
       <!-- a meteor streaks by now and then -->
       <line class="shooting-star" x1="852" y1="57" x2="800" y2="39"/>
 
-      <!-- survey ticks -->
-      <g class="tick">
-        <path d="M120 640h12M126 634v12"/>
-        <path d="M1330 560h12M1336 554v12"/>
+      <!-- foreground: pine ridge with a campfire — somebody's home down there -->
+      <g class="foreground">
+        <path class="ridge" d="M0 812 L140 786 L300 806 L470 768 L640 800 L820 780 L1000 802 L1160 778 L1330 800 L1440 786 L1440 900 L0 900 Z"/>
+        <path class="trees" d="
+          M140 738 L154 788 L126 788 Z
+          M240 764 L250 800 L230 800 Z
+          M470 714 L486 770 L454 770 Z
+          M640 754 L653 802 L627 802 Z
+          M820 730 L835 782 L805 782 Z
+          M1160 726 L1175 780 L1145 780 Z
+          M1240 754 L1250 790 L1230 790 Z
+          M1330 756 L1343 802 L1317 802 Z"/>
+        <circle class="campfire-glow" cx="1080" cy="784" r="46" fill="url(#fire-glow)"/>
+        <path class="camp-logs" d="M1068 790 L1092 784 M1070 784 L1090 790"/>
+        <path class="camp-flame" d="M1080 764 C1085 772 1087 778 1080 786 C1073 778 1075 772 1080 764 Z"/>
+        <circle class="spark s1" cx="1078" cy="768" r="1.4"/>
+        <circle class="spark s2" cx="1083" cy="766" r="1.2"/>
+        <circle class="spark s3" cx="1080" cy="770" r="1.1"/>
       </g>
     </svg>
 
@@ -94,17 +139,17 @@
       visions into real products — no more, no less than what you actually need.
     </p>
     <div class="hero-actions">
-      <a href="#services" class="btn btn-primary">Explore Services</a>
-      <a href="team.html" class="btn btn-ghost">Meet the Team</a>
+      <a href="#services" class="btn btn-primary">Open the Ship Log</a>
+      <a href="team.html" class="btn btn-ghost">Meet the Crew</a>
     </div>
-    <span class="scroll-hint">Scroll</span>
+    <span class="scroll-hint">Begin Exploration</span>
   </section>
 
-  <!-- ========== Services ========== -->
+  <!-- ========== Services (ship log) ========== -->
   <section class="services" id="services">
     <div class="container">
       <div class="section-head" data-reveal>
-        <p class="eyebrow">01 / What We Do</p>
+        <p class="eyebrow">01 / Ship Log</p>
         <h2 class="section-title">Purposeful technology, end to end.</h2>
         <p>
           From first conversation to lasting adoption, we meet mission-driven teams
@@ -115,7 +160,7 @@
       <div class="card-grid">
 
         <div class="card" data-reveal>
-          <span class="card-index">01</span>
+          <span class="card-index">Entry 01</span>
           <div class="icon">
             <!-- compass / bearing -->
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -133,7 +178,7 @@
         </div>
 
         <div class="card" data-reveal>
-          <span class="card-index">02</span>
+          <span class="card-index">Entry 02</span>
           <div class="icon">
             <!-- linked nodes -->
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -152,7 +197,7 @@
         </div>
 
         <div class="card" data-reveal>
-          <span class="card-index">03</span>
+          <span class="card-index">Entry 03</span>
           <div class="icon">
             <!-- engineered module -->
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -170,7 +215,7 @@
         </div>
 
         <div class="card" data-reveal>
-          <span class="card-index">04</span>
+          <span class="card-index">Entry 04</span>
           <div class="icon">
             <!-- heart under the stars -->
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -187,7 +232,7 @@
         </div>
 
         <div class="card" data-reveal>
-          <span class="card-index">05</span>
+          <span class="card-index">Entry 05</span>
           <div class="icon">
             <!-- trajectory chart -->
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -205,7 +250,7 @@
         </div>
 
         <div class="card" data-reveal>
-          <span class="card-index">06</span>
+          <span class="card-index">Entry 06</span>
           <div class="icon">
             <!-- crew -->
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -227,10 +272,10 @@
     </div>
   </section>
 
-  <!-- ========== Why Us (inverted statement) ========== -->
+  <!-- ========== Why Us ========== -->
   <section class="why" id="why">
     <div class="container">
-      <div class="why-content on-dark" data-reveal>
+      <div class="why-content" data-reveal>
         <p class="eyebrow">02 / Why Stargazer</p>
         <p class="why-statement">
           Too many non-profits get sold technology they don't need.
@@ -272,8 +317,14 @@
   <!-- ========== CTA ========== -->
   <section class="cta-band" id="contact">
     <div class="container" data-reveal>
-      <p class="eyebrow centered">03 / Contact</p>
-      <h2>Let's turn your mission into something real.</h2>
+      <p class="eyebrow centered">03 / Around the Campfire</p>
+      <svg class="cta-fire" viewBox="0 0 64 64" aria-hidden="true">
+        <path class="fire-flame" d="M32 10 C40 22 46 30 40 40 C37 45 34 47 32 48 C30 47 27 45 24 40 C18 30 24 22 32 10 Z"/>
+        <path class="fire-flame-inner" d="M32 28 C36 34 37 38 32 44 C27 38 28 34 32 28 Z"/>
+        <path class="fire-logs" d="M14 52 L50 58 M14 58 L50 52"/>
+      </svg>
+      <h2>Pull up a log. Tell us what you're working on.</h2>
+      <p class="cta-sub">Every good expedition starts with a conversation by the fire.</p>
       <a href="mailto:hello@stargazerinnovations.com" class="btn btn-primary">Start a Conversation</a>
     </div>
   </section>
@@ -292,7 +343,7 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 Stargazer Innovations. All rights reserved.</span>
-        <span>Listening first since day one.</span>
+        <span>Listening first since day one. Take your time.</span>
       </div>
     </div>
   </footer>
