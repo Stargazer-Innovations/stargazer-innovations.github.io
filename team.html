@@ -8,43 +8,44 @@
   <link rel="icon" type="image/svg+xml" href="images/logo-placeholder.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- ========== Nav ========== -->
-  <header>
+  <header id="site-header" class="scrolled">
     <nav class="site-nav">
       <a href="index.html" class="logo">
-        <span>Stargazer Innovations</span>
-        <img src="images/logo-placeholder.svg" alt="Stargazer Innovations logo">
+        <img src="images/logo.svg" alt="">
+        <span>Stargazer</span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#why">Why Us</a></li>
         <li><a href="team.html">Team</a></li>
+        <li class="always-show"><a href="index.html#contact" class="nav-cta">Get in Touch</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- ========== Team ========== -->
-  <section class="hero" style="padding-bottom: 32px;">
-    <h1>The People Behind the Stars</h1>
-    <p class="tagline">
-      A small team, on purpose. We believe the best consulting happens when
-      you actually know the people doing the work.
-    </p>
-  </section>
-
   <section class="team-section">
     <div class="container">
-      <h2 class="section-title">Meet the Team</h2>
+      <div class="section-head centered" data-reveal>
+        <p class="eyebrow">Crew Manifest</p>
+        <h2 class="section-title">The people behind the stars.</h2>
+        <p>
+          A small team, on purpose. We believe the best consulting happens when
+          you actually know the people doing the work.
+        </p>
+      </div>
+
       <div class="team-grid">
 
         <!-- Ed -->
-        <div class="team-card">
+        <div class="team-card" data-reveal>
+          <span class="crew-index">Crew / 01</span>
           <img
             src="images/ed-headshot.jpg"
             alt="Ed Koharik"
@@ -67,7 +68,8 @@
         </div>
 
         <!-- Cooper -->
-        <div class="team-card">
+        <div class="team-card" data-reveal>
+          <span class="crew-index">Crew / 02</span>
           <img
             src="images/cooper-headshot.jpg"
             alt="Cooper Healy"
@@ -93,9 +95,24 @@
 
   <!-- ========== Footer ========== -->
   <footer class="site-footer">
-    <div class="footer-stars">+ &middot; + &middot; +</div>
-    <p>&copy; 2026 Stargazer Innovations. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">Stargazer Innovations</div>
+        <ul class="footer-links">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#why">Why Us</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Stargazer Innovations. All rights reserved.</span>
+        <span>Listening first since day one.</span>
+      </div>
+    </div>
   </footer>
+
+  <script src="js/main.js"></script>
 
 </body>
 </html>
