@@ -285,7 +285,7 @@ header {
    don't waste visible-schedule time creeping through a shared dead zone */
 .hero-cloud {
   position: absolute;
-  animation: 360s linear infinite;
+  animation: 540s linear infinite;
   will-change: transform;
 }
 
@@ -302,22 +302,22 @@ header {
 /* Nearer (larger) clouds must always paint over farther (smaller) ones,
    so z-index follows the size ladder — DOM order can't be trusted for depth. */
 
-/* A cloudy day: nine clouds share one 360s master period with entries
-   staggered 40s apart — phase-locked, so the sky never empties and is
+/* A cloudy day: nine clouds share one 540s master period with entries
+   staggered 60s apart — phase-locked, so the sky never empties and is
    usually 3-4 deep. Crossing time is inversely proportional to size
-   (crossing seconds = 27000 / width): the 450px cloud drifts across in
-   a minute, the 82px one creeps for five and a half. Sizes step
+   (crossing seconds = 40500 / width): the 450px cloud drifts across in
+   110 seconds, the 82px one creeps for over eight minutes. Sizes step
    geometrically (~1.4x) so each depth plane reads distinctly; repeated
    sizes are mirrored so they don't read as clones. */
 .hero-cloud--1 {
   width: 450px;
   z-index: 9;
   left: -470px;
-  top: 6%;
+  top: 14%;
   --cloud-fill: #EDE1DA;
   --cloud-stroke: #3D4E73;
   animation-name: cloud-cross-450;
-  animation-delay: -44s;
+  animation-delay: -28s;
 }
 
 .hero-cloud--2 {
@@ -328,7 +328,7 @@ header {
   --cloud-fill: #DDD5D5;
   --cloud-stroke: #405178;
   animation-name: cloud-cross-320;
-  animation-delay: -284s;
+  animation-delay: -426s;
 }
 
 .hero-cloud--3 {
@@ -339,7 +339,7 @@ header {
   --cloud-fill: #E5D9D8;
   --cloud-stroke: #47567B;
   animation-name: cloud-cross-320;
-  animation-delay: -124s;
+  animation-delay: -186s;
 }
 
 .hero-cloud--4 {
@@ -350,7 +350,7 @@ header {
   --cloud-fill: #CAC5CB;
   --cloud-stroke: #3F5179;
   animation-name: cloud-cross-230;
-  animation-delay: -4s;
+  animation-delay: -6s;
 }
 
 .hero-cloud--5 {
@@ -361,7 +361,7 @@ header {
   --cloud-fill: #D1CBD2;
   --cloud-stroke: #465780;
   animation-name: cloud-cross-230;
-  animation-delay: -204s;
+  animation-delay: -306s;
 }
 
 .hero-cloud--6 {
@@ -372,7 +372,7 @@ header {
   --cloud-fill: #CFC3CD;
   --cloud-stroke: #60668B;
   animation-name: cloud-cross-165;
-  animation-delay: -324s;
+  animation-delay: -486s;
 }
 
 .hero-cloud--7 {
@@ -383,7 +383,7 @@ header {
   --cloud-fill: #ADACBC;
   --cloud-stroke: #3E4F7B;
   animation-name: cloud-cross-165;
-  animation-delay: -84s;
+  animation-delay: -126s;
 }
 
 .hero-cloud--8 {
@@ -394,7 +394,7 @@ header {
   --cloud-fill: #A6AAC1;
   --cloud-stroke: #4A5C8B;
   animation-name: cloud-cross-115;
-  animation-delay: -244s;
+  animation-delay: -366s;
 }
 
 .hero-cloud--9 {
@@ -405,7 +405,7 @@ header {
   --cloud-fill: #8F96B3;
   --cloud-stroke: #455888;
   animation-name: cloud-cross-82;
-  animation-delay: -164s;
+  animation-delay: -246s;
 }
 
 /* Mirror the size-twins */
@@ -418,7 +418,7 @@ header {
 /* Stop %% = (27000 / width) / 360s */
 @keyframes cloud-cross-450 {
   0%     { transform: translateX(0); }
-  16.7%  { transform: translateX(calc(100vw + var(--cloud-overshoot, 490px))); }
+  20.4%  { transform: translateX(calc(100vw + var(--cloud-overshoot, 490px))); }
   100%   { transform: translateX(calc(100vw + var(--cloud-overshoot, 490px))); }
 }
 
@@ -463,8 +463,8 @@ header {
   --cloud-fill: #F2E6DD;
   --cloud-stroke: #3D4E72;
   animation-name: cloud-drift-rare;
-  animation-duration: 300s;
-  animation-delay: -240s;
+  animation-duration: 450s;
+  animation-delay: -360s;
 }
 
 @keyframes cloud-drift-rare {
