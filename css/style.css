@@ -295,7 +295,7 @@ header {
   display: block;
   width: 100%;
   height: auto;
-  fill: var(--cloud-fill, #F2E6DC);
+  fill: var(--cloud-fill, #D2C0BC);
   stroke: var(--cloud-stroke, #3D4E72);
 }
 
@@ -314,7 +314,7 @@ header {
   z-index: 9;
   left: -470px;
   top: 14%;
-  --cloud-fill: #EDE1DA;
+  --cloud-fill: url(#cloud-grad-1);
   --cloud-stroke: #3D4E73;
   animation-name: cloud-cross-450;
   animation-delay: -28s;
@@ -325,7 +325,7 @@ header {
   z-index: 8;
   left: -340px;
   top: 38%;
-  --cloud-fill: #DDD5D5;
+  --cloud-fill: url(#cloud-grad-2);
   --cloud-stroke: #405178;
   animation-name: cloud-cross-320;
   animation-delay: -426s;
@@ -336,7 +336,7 @@ header {
   z-index: 8;
   left: -340px;
   top: 68%;
-  --cloud-fill: #E5D9D8;
+  --cloud-fill: url(#cloud-grad-3);
   --cloud-stroke: #47567B;
   animation-name: cloud-cross-320;
   animation-delay: -186s;
@@ -347,7 +347,7 @@ header {
   z-index: 7;
   left: -250px;
   top: 22%;
-  --cloud-fill: #CAC5CB;
+  --cloud-fill: url(#cloud-grad-4);
   --cloud-stroke: #3F5179;
   animation-name: cloud-cross-230;
   animation-delay: -6s;
@@ -358,7 +358,7 @@ header {
   z-index: 7;
   left: -250px;
   top: 55%;
-  --cloud-fill: #D1CBD2;
+  --cloud-fill: url(#cloud-grad-5);
   --cloud-stroke: #465780;
   animation-name: cloud-cross-230;
   animation-delay: -306s;
@@ -369,7 +369,7 @@ header {
   z-index: 6;
   left: -185px;
   top: 76%;
-  --cloud-fill: #CFC3CD;
+  --cloud-fill: url(#cloud-grad-6);
   --cloud-stroke: #60668B;
   animation-name: cloud-cross-165;
   animation-delay: -486s;
@@ -380,7 +380,7 @@ header {
   z-index: 6;
   left: -185px;
   top: 12%;
-  --cloud-fill: #ADACBC;
+  --cloud-fill: url(#cloud-grad-7);
   --cloud-stroke: #3E4F7B;
   animation-name: cloud-cross-165;
   animation-delay: -126s;
@@ -391,7 +391,7 @@ header {
   z-index: 5;
   left: -135px;
   top: 47%;
-  --cloud-fill: #A6AAC1;
+  --cloud-fill: url(#cloud-grad-8);
   --cloud-stroke: #4A5C8B;
   animation-name: cloud-cross-115;
   animation-delay: -366s;
@@ -402,7 +402,7 @@ header {
   z-index: 4;
   left: -102px;
   top: 30%;
-  --cloud-fill: #8F96B3;
+  --cloud-fill: url(#cloud-grad-9);
   --cloud-stroke: #455888;
   animation-name: cloud-cross-82;
   animation-delay: -246s;
@@ -460,7 +460,7 @@ header {
   z-index: 10;
   top: -2%;
   left: -660px;
-  --cloud-fill: #F2E6DD;
+  --cloud-fill: url(#cloud-grad-giant);
   --cloud-stroke: #3D4E72;
   animation-name: cloud-drift-rare;
   animation-duration: 450s;
@@ -485,6 +485,7 @@ header {
   text-transform: uppercase;
   color: #f2d998;
   margin-bottom: 14px;
+  text-shadow: 0 1px 8px rgba(26, 32, 68, 0.5);
 }
 
 .hero h1 {
@@ -494,6 +495,7 @@ header {
   margin-bottom: 16px;
   color: var(--cream);
   line-height: 1.15;
+  text-shadow: 0 2px 16px rgba(26, 32, 68, 0.55);
 }
 
 .hero .tagline {
@@ -501,6 +503,7 @@ header {
   max-width: 620px;
   margin: 0 auto 40px;
   color: #eef2fb;
+  text-shadow: 0 1px 10px rgba(26, 32, 68, 0.5);
 }
 
 .hero .balloon-logo {
