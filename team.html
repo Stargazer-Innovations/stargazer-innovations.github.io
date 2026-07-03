@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Team — Stargazer Innovations</title>
   <meta name="description" content="Meet the people behind Stargazer Innovations — a small team with big ideas for mission-driven technology.">
+  <link rel="canonical" href="https://stargazer-innovations.org/team.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Stargazer Innovations">
+  <meta property="og:title" content="Our Team — Stargazer Innovations">
+  <meta property="og:description" content="Meet the people behind Stargazer Innovations — a small team with big ideas for mission-driven technology.">
+  <meta property="og:url" content="https://stargazer-innovations.org/team.html">
   <link rel="icon" type="image/svg+xml" href="images/logo-placeholder.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,34 +19,55 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- ========== Nav ========== -->
   <header>
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Main">
       <a href="index.html" class="logo">
+        <img src="images/logo-placeholder.svg" alt="">
         <span>Stargazer Innovations</span>
-        <img src="images/logo-placeholder.svg" alt="Stargazer Innovations logo">
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#why">Why Us</a></li>
-        <li><a href="team.html">Team</a></li>
+        <li><a href="team.html" aria-current="page">Team</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <main id="main">
+
   <!-- ========== Team ========== -->
-  <section class="hero" style="padding-bottom: 32px;">
+  <section class="hero page-hero">
+    <div class="hero-clouds" aria-hidden="true">
+      <svg width="0" height="0" style="position:absolute" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="cloud-shape" viewBox="0 0 140 60">
+          <path d="M18 48 C 9 48 3 41 5 34 C 7 28 13 24 19 25 C 19 16 27 9 36 11 C 40 4 51 2 58 8 C 64 3 75 4 80 11 C 89 8 99 13 100 22 C 108 22 115 28 114 36 C 113 44 105 48 97 47 C 84 51 40 51 18 48 Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+      </svg>
+      <div class="hero-cloud hero-cloud--1"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
+      <div class="hero-cloud hero-cloud--2"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
+      <div class="hero-cloud hero-cloud--3"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
+      <div class="hero-cloud hero-cloud--4"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
+      <div class="hero-cloud hero-cloud--5"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
+      <div class="hero-cloud hero-cloud--6"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
+      <div class="hero-cloud hero-cloud--7"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
+      <div class="hero-cloud hero-cloud--8"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
+      <div class="hero-cloud hero-cloud--9"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
+    </div>
+    <p class="kicker">A small team, on purpose</p>
     <h1>The People Behind the Stars</h1>
     <p class="tagline">
-      A small team, on purpose. We believe the best consulting happens when
-      you actually know the people doing the work.
+      We believe the best consulting happens when you actually know
+      the people doing the work.
     </p>
   </section>
 
   <section class="team-section">
     <div class="container">
-      <h2 class="section-title">Meet the Team</h2>
       <div class="team-grid">
 
         <!-- Ed -->
@@ -53,17 +80,17 @@
           <h3>Ed Koharik</h3>
           <p class="role">Chief Executive Officer</p>
           <p class="bio">
-  Ed leads Stargazer's consulting practice and is usually the first
-  person a client talks to. He's spent the previous three years as a product
-  manager at Youth Villages, so he reads a mission-driven org's
-  constraints before the engineering starts — the tight budget, the lean
-  staff, the tool that has to keep working long after the project wraps.
-  He also teaches innovation at Missouri S&amp;T, where the whole subject
-  is helping good ideas reach the people they're meant to serve. He works
-  directly with each team to understand the real problem and map a
-  practical path. His philosophy is simple: listen first, recommend only
-  what's needed, and stay until it actually works.
-</p>
+            Ed leads Stargazer's consulting practice and is usually the first
+            person a client talks to. He's spent the previous three years as a product
+            manager at Youth Villages, so he reads a mission-driven org's
+            constraints before the engineering starts — the tight budget, the lean
+            staff, the tool that has to keep working long after the project wraps.
+            He also teaches innovation at Missouri S&amp;T, where the whole subject
+            is helping good ideas reach the people they're meant to serve. He works
+            directly with each team to understand the real problem and map a
+            practical path. His philosophy is simple: listen first, recommend only
+            what's needed, and stay until it actually works.
+          </p>
         </div>
 
         <!-- Cooper -->
@@ -76,25 +103,61 @@
           <h3>Cooper Healy</h3>
           <p class="role">Director of Research &amp; Development</p>
           <p class="bio">
-  Cooper is the engineer Stargazer brings in when a project needs
-  something built, not bought. He's worked across data, infrastructure,
-  and product for over a decade — he founded the data department at a
-  venture-backed startup, and earlier cut a company's cloud costs by 85%
-  with a single redesign. For nonprofit work, he cares most about one
-  thing: that what he builds is something your team can run on its own
-  after the engagement ends — no vendor lock-in, no black boxes, nothing
-  that needs a consultant on retainer to keep alive.
-  </p>
+            Cooper is the engineer Stargazer brings in when a project needs
+            something built, not bought. He's worked across data, infrastructure,
+            and product for over a decade — he founded the data department at a
+            venture-backed startup, and earlier cut a company's cloud costs by 85%
+            with a single redesign. For nonprofit work, he cares most about one
+            thing: that what he builds is something your team can run on its own
+            after the engagement ends — no vendor lock-in, no black boxes, nothing
+            that needs a consultant on retainer to keep alive.
+          </p>
         </div>
 
       </div>
     </div>
   </section>
 
+  <div class="sparkle-divider" aria-hidden="true">
+    <svg viewBox="0 0 220 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 14 C 38 10, 66 16, 92 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M128 13 C 154 10, 182 16, 214 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path class="divider-star" d="M110 4 C 111 8.7 113.4 11.1 118 12.2 C 113.4 13.3 111 15.7 110 20.4 C 109 15.7 106.6 13.3 102 12.2 C 106.6 11.1 109 8.7 110 4 Z"/>
+    </svg>
+  </div>
+
+  <!-- ========== Contact ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <h2>Sound like a good fit?</h2>
+        <p>
+          Whether you have a fully-formed project or just a hunch that
+          things could work better, we'd love to hear about it.
+        </p>
+        <a href="mailto:hello@stargazer-innovations.org" class="cta-btn">Say Hello</a>
+        <span class="email-note">
+          Or write to us directly at
+          <a href="mailto:hello@stargazer-innovations.org">hello@stargazer-innovations.org</a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
   <!-- ========== Footer ========== -->
   <footer class="site-footer">
-    <div class="footer-stars">+ &middot; + &middot; +</div>
-    <p>&copy; 2026 Stargazer Innovations. All rights reserved.</p>
+    <div class="footer-stars" aria-hidden="true">+ &middot; + &middot; +</div>
+    <p class="footer-wordmark">Stargazer Innovations</p>
+    <p class="footer-tagline">Thoughtful technology for mission-driven organizations.</p>
+    <ul class="footer-nav">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#why">Why Us</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="mailto:hello@stargazer-innovations.org">Contact</a></li>
+    </ul>
+    <p class="copyright">&copy; 2026 Stargazer Innovations. All rights reserved.</p>
   </footer>
 
 </body>
