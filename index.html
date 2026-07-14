@@ -150,12 +150,29 @@
   <section class="services" id="services">
     <div class="container">
       <h2 class="section-title">What We Do</h2>
-      <p class="section-lede">
+      <!-- CSS-only tabs: hidden radios drive which lede and cards show -->
+      <input class="audience-radio" type="radio" name="audience" id="pick-nonprofits" checked>
+      <input class="audience-radio" type="radio" name="audience" id="pick-academic">
+      <input class="audience-radio" type="radio" name="audience" id="pick-smallbiz">
+      <div class="audience-tabs">
+        <label class="audience-tab" for="pick-nonprofits">Non-Profits</label>
+        <label class="audience-tab" for="pick-academic">Academic Research</label>
+        <label class="audience-tab" for="pick-smallbiz">Small Businesses</label>
+      </div>
+      <p class="section-lede audience-lede audience-lede--nonprofits">
         We find the simplest way to solve your problem so you can focus on the impact.
+      </p>
+      <p class="section-lede audience-lede audience-lede--academic">
+        We take the technical busywork off your plate — data, tooling, and automation —
+        so you can focus on the research.
+      </p>
+      <p class="section-lede audience-lede audience-lede--smallbiz">
+        We find right-sized technology that saves you time and money —
+        no enterprise budget required.
       </p>
       <div class="card-grid">
 
-        <div class="card">
+        <div class="card" data-audience="nonprofits smallbiz">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="16" cy="16" r="11"/>
@@ -170,7 +187,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" data-audience="nonprofits academic smallbiz">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M11.5 6.5 H8.6 C7.7 6.5 7 7.2 7 8.1 V25.4 C7 26.3 7.7 27 8.6 27 H23.4 C24.3 27 25 26.3 25 25.4 V8.1 C25 7.2 24.3 6.5 23.4 6.5 H20.5"/>
@@ -187,7 +204,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" data-audience="nonprofits smallbiz">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M27.2 9.8 a6.8 6.8 0 0 1 -8.9 8 L10 26.2 a2.8 2.8 0 0 1 -4 -4 l8.4 -8.3 a6.8 6.8 0 0 1 8 -8.9 l-4.2 4.3 1 3.7 3.7 1 Z"/>
@@ -201,7 +218,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" data-audience="nonprofits academic smallbiz">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 27 C 16 21 16 17 16 13.5"/>
@@ -217,7 +234,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" data-audience="nonprofits academic">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6.5 5.5 V25.5 H26.5"/>
@@ -233,7 +250,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" data-audience="nonprofits academic smallbiz">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="11.5" r="4.2"/>
