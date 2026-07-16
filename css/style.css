@@ -775,6 +775,18 @@ section {
   border-radius: 22px 14px 20px 18px;
   transform: rotate(-0.8deg);
 }
+.card:nth-child(7) {
+  border-radius: 14px 22px 18px 24px;
+  transform: rotate(0.9deg);
+}
+.card:nth-child(8) {
+  border-radius: 20px 16px 24px 12px;
+  transform: rotate(-0.7deg);
+}
+.card:nth-child(9) {
+  border-radius: 24px 18px 14px 22px;
+  transform: rotate(0.5deg);
+}
 
 .card:nth-child(1)::before {
   background: var(--blue);
@@ -806,6 +818,21 @@ section {
   left: 42%;
   transform: translateX(-50%) rotate(2deg);
 }
+.card:nth-child(7)::before {
+  background: var(--green);
+  left: 54%;
+  transform: translateX(-50%) rotate(-2.5deg);
+}
+.card:nth-child(8)::before {
+  background: var(--salmon);
+  left: 46%;
+  transform: translateX(-50%) rotate(3deg);
+}
+.card:nth-child(9)::before {
+  background: var(--blue);
+  left: 52%;
+  transform: translateX(-50%) rotate(-1.5deg);
+}
 
 .card:hover {
   box-shadow: 0 8px 28px rgba(26, 43, 107, 0.09);
@@ -829,6 +856,9 @@ section {
 .card:nth-child(4) .icon { background: var(--orange); }
 .card:nth-child(5) .icon { background: var(--pink); }
 .card:nth-child(6) .icon { background: var(--blue); }
+.card:nth-child(7) .icon { background: var(--green); }
+.card:nth-child(8) .icon { background: var(--salmon); }
+.card:nth-child(9) .icon { background: var(--blue); }
 
 .card .icon svg {
   width: 32px;
