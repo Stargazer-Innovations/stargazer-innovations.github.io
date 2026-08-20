@@ -355,7 +355,59 @@
           we'd love to hear about it. The first conversation is free, friendly, and jargon-free 
           — and if the honest answer is "you don't need us," we'll say so.
         </p>
-        <a href="mailto:hello@stargazer-innovations.org" class="cta-btn">Say Hello</a>
+        <form class="contact-form" action="https://formsubmit.co/hello@stargazer-innovations.org" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from stargazer-innovations.org">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://stargazer-innovations.org/thanks.html">
+          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="first-name">First name</label>
+              <input type="text" id="first-name" name="First Name" autocomplete="given-name" required>
+            </div>
+            <div class="form-field">
+              <label for="last-name">Last name</label>
+              <input type="text" id="last-name" name="Last Name" autocomplete="family-name" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="org-type">Type of organization</label>
+              <select id="org-type" name="Type of Organization" required>
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option>Nonprofit</option>
+                <option>Small business</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="services">Services of interest</label>
+              <select id="services" name="Services of Interest" required>
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option>Web development</option>
+                <option>Custom software</option>
+                <option>Process improvement</option>
+                <option>Product idea analysis</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="other-info">Anything else we should know?</label>
+            <textarea id="other-info" name="Other Info" rows="5" placeholder="Your project, your hunch, your big idea — all welcome."></textarea>
+          </div>
+
+          <button type="submit" class="cta-btn">Send It Skyward</button>
+          <p class="form-note">We read every message and will reach out within 48 hours.</p>
+        </form>
         <span class="email-note">
           Or write to us directly at
           <a href="mailto:hello@stargazer-innovations.org">hello@stargazer-innovations.org</a>
@@ -375,7 +427,7 @@
       <li><a href="index.html#services">Services</a></li>
       <li><a href="index.html#why">Why Us</a></li>
       <li><a href="team.html">Team</a></li>
-      <li><a href="mailto:hello@stargazer-innovations.org">Contact</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
     </ul>
     <p class="copyright">&copy; 2026 Stargazer Innovations. All rights reserved.</p>
   </footer>
