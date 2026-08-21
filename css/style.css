@@ -951,6 +951,114 @@ section {
   color: var(--blue-hover);
 }
 
+/* ===== Contact Form ===== */
+.contact-form {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.honeypot {
+  display: none;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 18px;
+}
+
+.form-field {
+  margin-bottom: 18px;
+}
+
+.form-field label {
+  display: block;
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  transform: rotate(-0.5deg);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--midnight);
+  background: var(--cream);
+  border: 2px solid var(--divider);
+  border-radius: 12px 8px 14px 9px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field select {
+  border-radius: 9px 13px 8px 12px;
+  cursor: pointer;
+}
+
+.form-field textarea {
+  border-radius: 14px 10px 9px 13px;
+  resize: vertical;
+}
+
+/* Placeholder option reads as a hint until a real choice is made */
+.form-field select:required:invalid {
+  color: var(--midnight-faded);
+}
+
+.form-field select option {
+  color: var(--midnight);
+}
+
+.form-field ::placeholder {
+  color: var(--midnight-ghost);
+  font-style: italic;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--blue-hover);
+  box-shadow: 0 0 0 3px rgba(102, 128, 178, 0.15);
+}
+
+/* Gentle nudge on fields left invalid after the user has touched them */
+.form-field input:user-invalid,
+.form-field select:user-invalid {
+  border-color: var(--salmon);
+}
+
+.contact-form .cta-btn {
+  display: block;
+  margin: 6px auto 0;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-card .form-note {
+  margin: 16px auto 0;
+  font-size: 0.9rem;
+  color: var(--midnight-faded);
+}
+
+@media (max-width: 560px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* ===== Thanks Page ===== */
+.thanks-section {
+  padding-top: 96px;
+}
+
 /* ===== Team Page ===== */
 .page-hero {
   padding-bottom: 72px;
