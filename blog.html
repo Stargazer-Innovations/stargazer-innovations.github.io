@@ -11,14 +11,14 @@
     gtag('js', new Date());
     gtag('config', 'G-MH76R31J2H');
   </script>
-  <title>Our Team — Stargazer Innovations</title>
-  <meta name="description" content="Meet the people behind Stargazer Innovations — a small team with big ideas for mission-driven technology.">
-  <link rel="canonical" href="https://stargazer-innovations.org/team.html">
+  <title>Blog — Stargazer Innovations</title>
+  <meta name="description" content="Product thinking, lessons from the field, and honest notes on building thoughtful technology for mission-driven organizations.">
+  <link rel="canonical" href="https://stargazer-innovations.org/blog.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Stargazer Innovations">
-  <meta property="og:title" content="Our Team — Stargazer Innovations">
-  <meta property="og:description" content="Meet the people behind Stargazer Innovations — a small team with big ideas for mission-driven technology.">
-  <meta property="og:url" content="https://stargazer-innovations.org/team.html">
+  <meta property="og:title" content="Blog — Stargazer Innovations">
+  <meta property="og:description" content="Product thinking, lessons from the field, and honest notes on building thoughtful technology for mission-driven organizations.">
+  <meta property="og:url" content="https://stargazer-innovations.org/blog.html">
   <link rel="icon" type="image/svg+xml" href="images/logo-placeholder.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,8 +40,8 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#why">Why Us</a></li>
-        <li><a href="team.html" aria-current="page">Team</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -49,7 +49,7 @@
 
   <main id="main">
 
-  <!-- ========== Team ========== -->
+  <!-- ========== Blog Hero ========== -->
   <section class="hero page-hero">
     <div class="hero-stars" aria-hidden="true">
       <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMin meet" xmlns="http://www.w3.org/2000/svg">
@@ -117,11 +117,6 @@
           <stop offset="0.55" stop-color="#8186A6"/>
           <stop offset="1" stop-color="#9894A6"/>
         </linearGradient>
-        <linearGradient id="cloud-grad-giant" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#B5AAB2"/>
-          <stop offset="0.55" stop-color="#D0BFBC"/>
-          <stop offset="1" stop-color="#E1C7B2"/>
-        </linearGradient>
       </defs>
         <symbol id="cloud-shape" viewBox="0 0 140 60">
           <path d="M18 48 C 9 48 3 41 5 34 C 7 28 13 24 19 25 C 19 16 27 9 36 11 C 40 4 51 2 58 8 C 64 3 75 4 80 11 C 89 8 99 13 100 22 C 108 22 115 28 114 36 C 113 44 105 48 97 47 C 84 51 40 51 18 48 Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -137,82 +132,41 @@
       <div class="hero-cloud hero-cloud--8"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
       <div class="hero-cloud hero-cloud--9"><svg viewBox="0 0 140 60"><use href="#cloud-shape"/></svg></div>
     </div>
-    <p class="kicker">A small team, on purpose</p>
-    <h1>The People Behind the Stars</h1>
+    <p class="kicker">The Stargazer Blog</p>
+    <h1>Notes from the Workshop</h1>
     <p class="tagline">
-      We believe the best consulting happens when you actually know
-      the people doing the work.
+      Product thinking, lessons from the field, and the occasional strong opinion —
+      from the team building thoughtful technology for mission-driven work.
     </p>
   </section>
 
-  <section class="team-section">
+  <!-- ========== Post List ==========
+       HOW TO ADD A POST:
+       1. Copy blog/example-post.html to blog/your-slug.html and fill it in.
+       2. Copy the <a class="post-card"> block below, paste it at the TOP of
+          .post-list (newest first), and update the href, date, title, and excerpt.
+       Cards cycle color/tilt automatically, so you never have to touch the CSS. -->
+  <section class="post-list-section">
     <div class="container">
-      <div class="team-grid">
+      <div class="post-list">
 
-        <!-- Ed -->
-        <div class="team-card">
-          <img
-            src="images/ed-headshot.jpg"
-            alt="Ed Koharik"
-            class="avatar"
-          >
-          <h3>Ed Koharik</h3>
-          <p class="role">Chief Executive Officer</p>
-          <p class="bio">
-            Ed founded Stargazer to help good people make an impact. With 10 years experience in software, 
-            he can see opportunities and recommend the simplest path to achieve outcomes. 
-            Having spent three years building an engineering team within a non-profit, he knows your constraints
-            — the budget limitations, the lean staff, the "MVP" that has to keep working long after the project wraps. 
-            Ed is also an adjunct professor of Economics and Innovation at Missouri S&T, where he trains 
-            students to bring their ideas to reality through understanding their customer.
+        <a class="post-card" href="blog/how-we-approach-problems.html">
+          <p class="post-card__meta">
+            <time datetime="2026-08-29">August 29, 2026</time>
+            <span class="post-card__dot">&middot;</span> 5 min read
+            <span class="post-card__dot">&middot;</span> <span class="post-card__tag">Our Process</span>
           </p>
-        </div>
-
-        <!-- Cooper -->
-        <div class="team-card">
-          <img
-            src="images/cooper-headshot.jpg"
-            alt="Cooper Healy"
-            class="avatar"
-          >
-          <h3>Cooper Healy</h3>
-          <p class="role">Director of Research &amp; Development</p>
-          <p class="bio">
-            Cooper is Stargazer's Founding Engineer and Director of R&D. He's worked across data, 
-            infrastructure, and product for over a decade — he founded the data department at a 
-            venture-backed startup, and cut a company's cloud costs by 85% with a single redesign. 
-            For nonprofit work, he cares most about one thing: that what he builds is something 
-            your team can run on its own after the engagement ends — no vendor lock-in, no black 
-            boxes, nothing that needs a consultant on retainer to keep alive.
+          <h2 class="post-card__title">How we approach problems</h2>
+          <p class="post-card__excerpt">
+            At Stargazer, technology is our tool chest, but our objective is
+            always to provide value to our customers. Solving your problem in the
+            most efficient way possible is our focus.
           </p>
-        </div>
+          <span class="post-card__more">Read the post &rarr;</span>
+        </a>
 
-      </div>
-    </div>
-  </section>
+        <!-- Duplicate the block above for each new post (newest at the top). -->
 
-  <div class="sparkle-divider" aria-hidden="true">
-    <svg viewBox="0 0 220 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 14 C 38 10, 66 16, 92 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M128 13 C 154 10, 182 16, 214 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      <path class="divider-star" d="M110 4 C 111 8.7 113.4 11.1 118 12.2 C 113.4 13.3 111 15.7 110 20.4 C 109 15.7 106.6 13.3 102 12.2 C 106.6 11.1 109 8.7 110 4 Z"/>
-    </svg>
-  </div>
-
-  <!-- ========== Contact ========== -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact-card">
-        <h2>Sound like a good fit?</h2>
-        <p>
-          Whether you have a fully-formed project or just a hunch that
-          things could work better, we'd love to hear about it.
-        </p>
-        <a href="index.html#contact" class="cta-btn">Say Hello</a>
-        <span class="email-note">
-          Or write to us directly at
-          <a href="mailto:hello@stargazer-innovations.org">hello@stargazer-innovations.org</a>
-        </span>
       </div>
     </div>
   </section>
